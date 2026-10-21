@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#edf7ff">
+<title>ইমন - জরুরি পচানি বিজ্ঞপ্তি</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#edf7ff; --card:#ffffff; --ink:#12263a; --muted:#4d6479;
+    --accent:#0a84ff; --pop:#ffd43b; --line:#cfe5f7;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0e1a26; --card:#16283a; --ink:#eaf4ff; --muted:#a6bdd2; --accent:#4aa8ff; --pop:#ffd43b; --line:#26405a; }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    font-family:'Hind Siliguri',system-ui,sans-serif;
+    background:var(--bg); color:var(--ink);
+    padding:max(20px,env(safe-area-inset-top)) 16px max(28px,env(safe-area-inset-bottom));
+    display:flex; justify-content:center;
+  }
+  main{width:100%; max-width:520px}
+  .badge{
+    display:inline-block; background:var(--pop); color:#3a2c00;
+    font-weight:700; padding:4px 14px; border-radius:999px; font-size:14px; margin-bottom:10px;
+  }
+  h1{font-size:clamp(30px,8vw,40px); line-height:1.2; margin:0 0 12px; font-weight:700}
+  .lead{font-size:18px; line-height:1.7; color:var(--muted); margin:0 0 20px}
+  .lead b{color:var(--ink)}
+  figure{margin:0 0 20px; background:var(--card); border:2px solid var(--line); border-radius:18px; overflow:hidden}
+  figure img{display:block; width:100%; height:auto; max-height:70vh; object-fit:cover; object-position:center 30%}
+  figcaption{padding:12px 16px; font-size:17px; font-weight:600; text-align:center}
+  .box{background:var(--card); border:2px solid var(--line); border-radius:18px; padding:18px; margin-bottom:16px}
+  .box h2{margin:0 0 8px; font-size:20px}
+  .box p{margin:0; font-size:17px; line-height:1.7; color:var(--muted)}
+  .quote{font-size:20px; line-height:1.6; font-weight:600; color:var(--ink); min-height:96px; display:flex; align-items:center}
+  button{
+    font-family:inherit; font-size:18px; font-weight:700; color:#fff; background:var(--accent);
+    border:0; border-radius:14px; padding:14px 18px; width:100%; margin-top:12px; cursor:pointer;
+  }
+  button:active{transform:scale(.98)}
+  button:focus-visible{outline:3px solid var(--pop); outline-offset:3px}
+  ul{margin:0; padding-left:20px; font-size:17px; line-height:1.9; color:var(--muted)}
+  footer{text-align:center; font-size:14px; color:var(--muted); margin-top:20px}
+</style>
+</head>
+<body>
+<main>
+  <span class="badge">জরুরি পচানি বিজ্ঞপ্তি</span>
+  <h1>ইমন: দেশের সবচেয়ে বড় ফাঁকিবাজ (অপ্রমাণিত)</h1>
+  <p class="lead">বন্ধু-বান্ধব সবার অবগতির জন্য জানানো যাচ্ছে, <b>ইমন</b> নামক এই প্রাণী নিচু থেকে ছবি তুলে নিজেকে লম্বা দেখানোর চেষ্টা করেছে। বিষয়টি আমরা কেউ মেনে নিইনি।</p>
+
+  <figure>
+    <img src="images/pic.jpg" alt="ইমনের ছবি">
+    <figcaption>টিনের চালের নিচে দাঁড়িয়ে ভাব নিচ্ছে যেন সে প্রাসাদের মালিক</figcaption>
+  </figure>
+
+  <section class="box">
+    <h2>ইমনের আজকের পচানি</h2>
+    <div class="quote" id="quote">নিচের বাটনে চাপ দিন, ইমনের আজকের দফারফা দেখুন।</div>
+    <button id="btn" type="button">ইমনকে আবার পচাও</button>
+  </section>
+
+  <section class="box">
+    <h2>ইমনের সম্পর্কে অকাট্য সত্য</h2>
+    <ul>
+      <li>খাওয়ার দাওয়াত পেলে সবার আগে হাজির, কাজের কথা শুনলে নেটওয়ার্ক নাই</li>
+      <li>"পাঁচ মিনিটে আসছি" মানে কমপক্ষে এক ঘণ্টা</li>
+      <li>ধার নিলে ফেরত দেওয়ার কথা মনে থাকে না, ধার দেওয়ার কথা তো একদম না</li>
+      <li>ছবি তোলার সময় ভাব এমন, যেন পাসপোর্ট নয়, অস্কারের ছবি</li>
+      <li>গ্রুপে মেসেজ দিলে সিন করে, রিপ্লাই দেয় তিন দিন পর</li>
+    </ul>
+  </section>
+
+  <footer>বন্ধুত্বের খাতিরে পচানো হলো, ইমন রাগ করলে ট্রিট দিয়ে মিটমাট হবে</footer>
+</main>
+
+<script>
+  var lines = [
+    "ইমন বলে সে সময়ের দাম দেয়, অথচ আজ পর্যন্ত একটাও সময়মতো আসেনি।",
+    "ইমনের ডায়েট প্ল্যান: সকালে প্ল্যান করা, দুপুরে ভুলে যাওয়া, রাতে বিরিয়ানি।",
+    "ইমন ঘুমালে ডাকলে ওঠে না, কিন্তু খাবারের নাম শুনলেই লাফ দিয়ে ওঠে।",
+    "ইমনকে জিজ্ঞেস করলাম কেমন আছিস, বলল ব্যস্ত। কীসে ব্যস্ত? ফোনে রিল দেখায়।",
+    "ইমনের কনফিডেন্স দেখে মনে হয় সে নিজেই নিজের ফ্যান ক্লাবের প্রেসিডেন্ট।",
+    "ইমন বলল আজ থেকে সিরিয়াস হব। তিন মিনিট পরে স্টোরিতে ফানি মিম।",
+    "ইমনের ওয়াদা আর বরফের টুকরা, দুটোই রোদে বেশিক্ষণ টেকে না।",
+    "ইমন যেদিন সময়মতো আসবে, সেদিন আমরা সবাই মিষ্টি বিলি করব।",
+    "ইমনের হাতে মোবাইল থাকলে দুনিয়া থেমে যায়, শুধু চার্জ ফুরোয়।",
+    "ইমন বলে সে কম খায়। বিরিয়ানির প্লেট সাক্ষী আছে।"
+  ];
+  var last = -1;
+  function pick(){
+    var i;
+    do { i = Math.floor(Math.random() * lines.length); } while (i === last && lines.length > 1);
+    last = i;
+    document.getElementById('quote').textContent = lines[i];
+  }
+  document.getElementById('btn').addEventListener('click', pick);
+</script>
+</body>
+</html>
